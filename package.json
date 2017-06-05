@@ -1,0 +1,25 @@
+{
+  "name": "liammagee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "milligram": "^1.3.0",
+    "moment": "^2.18.1",
+    "p5": "^0.5.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liammagee/liammagee.git"
+  },
+  "author": "Liam Magee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liammagee/liammagee/issues"
+  },
+  "homepage": "https://github.com/liammagee/liammagee#readme"
+}
