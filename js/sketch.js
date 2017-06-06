@@ -1,9 +1,9 @@
 var canvas;
 var mic;
 var points = [];
+var $ = window.$;
 
 $(window).scroll(function() {
-  console.log('got here');
   resizeCanvas(windowWidth, windowHeight);
   if (canvas !== undefined) {
     var st = $(this).scrollTop();
