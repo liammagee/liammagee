@@ -30,20 +30,26 @@ function mouseMove() {
     points = points.slice(points.length - 30);
   }
 }
+
 function draw() {
   background(255);
-  // stroke(0);
-  // fill(0);
-  // translate(-width / 2, -height / 2, 0);
-  //box();
-  stroke(64, 10);
-  fill(0, 255, 0, 5);
-  points.push(new p5.Vector(mouseX, mouseY));
+
+
+  var queueLength = 40;
+  var circleInc = queueLength * 3;
+  var offset = queueLength * 1;
   for (var i = 0; i < points.length; i++) {
       var p = points[i];
-      ellipse(p.x, p.y, 100, 100);
+      var altI = points.length - i;
+      var r = offset + i * (circleInc - offset) / points.length;
+      var alphaStroke = i * 2;
+      var alphaFill = i * 1;
+      stroke(64, alphaStroke);
+      fill(0, 255, 0, alphaFill);
+      ellipse(p.x, p.y, r, r);
   }
-  if (points.length > 20) {
-    points = points.slice(points.length - 20);
+  if (points.length > queueLength) {
+    points = points.slice(points.length - queueLength);
   }
+  points.push(createVector(mouseX, mouseY));
 }
