@@ -36,14 +36,14 @@ function draw() {
 
 
   var queueLength = 40;
-  var circleInc = queueLength * 3;
-  var offset = queueLength * 1;
+  var circleInc = queueLength * 1;
+  var offset = queueLength * 0.25;
   for (var i = 0; i < points.length; i++) {
       var p = points[i];
       var altI = points.length - i;
       var r = offset + i * (circleInc - offset) / points.length;
-      var alphaStroke = i * 2;
-      var alphaFill = i * 1;
+      var alphaStroke = i * 1;
+      var alphaFill = i * 0.5;
       stroke(64, alphaStroke);
       fill(0, 255, 0, alphaFill);
       ellipse(p.x, p.y, r, r);

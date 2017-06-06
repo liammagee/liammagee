@@ -18,6 +18,10 @@ module.exports = {
             loader: "file-loader?name=index.html&context=./app/static"
           },
           {
+            test: /\.png$/,
+            loader: "file-loader?name=[name].[ext]&publicPath=images/&outputPath=images/"
+          },
+          {
             test: /sketch\.js$/,
             loader: "file-loader?name=js/sketch.js&context=./app/static"
           },
